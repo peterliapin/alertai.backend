@@ -35,12 +35,8 @@ node_modules/
 # User-specific files
 *.userprefs
 *.bak
-*.vscode
 
 # .NET Core
 project.lock.json
 project.fragment.lock.json
 artifacts/
-
-# Visual Studio Code
-.vscode/
