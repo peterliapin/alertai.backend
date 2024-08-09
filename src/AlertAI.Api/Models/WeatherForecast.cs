@@ -1,4 +1,4 @@
-namespace AlertAI;
+namespace AlertAI.Models;
 
 public class WeatherForecast
 {

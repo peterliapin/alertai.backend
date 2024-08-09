@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlertAI", "src\AlertAI.Api\AlertAI.Api.csproj", "{2E7C2640-E6FA-459A-B488-CFE8EBCEC176}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlertAI.Api.Tests", "tests\AlertAI.Api.Tests\AlertAI.Api.Tests.csproj", "{09E31353-762C-4B1E-86B4-BBABF42162FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2E7C2640-E6FA-459A-B488-CFE8EBCEC176}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E7C2640-E6FA-459A-B488-CFE8EBCEC176}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E7C2640-E6FA-459A-B488-CFE8EBCEC176}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09E31353-762C-4B1E-86B4-BBABF42162FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09E31353-762C-4B1E-86B4-BBABF42162FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09E31353-762C-4B1E-86B4-BBABF42162FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09E31353-762C-4B1E-86B4-BBABF42162FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

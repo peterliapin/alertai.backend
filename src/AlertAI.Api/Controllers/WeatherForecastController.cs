@@ -1,3 +1,4 @@
+using AlertAI.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AlertAI.Controllers;
