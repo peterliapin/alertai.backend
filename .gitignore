@@ -1,0 +1,46 @@
+# .NET build artifacts
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.sln.docstates
+
+# NuGet packages
+*.nuget.props
+*.nuget.targets
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+AnyCPU/
+*.exe
+*.pdb
+*.dll
+*.so
+*.dylib
+*.node
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NPM packages
+node_modules/
+
+# User-specific files
+*.userprefs
+*.bak
+*.vscode
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Visual Studio Code
+.vscode/
