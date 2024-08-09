@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlertAI", "AlertAI.csproj", "{2E7C2640-E6FA-459A-B488-CFE8EBCEC176}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlertAI", "src\AlertAI.Api\AlertAI.Api.csproj", "{2E7C2640-E6FA-459A-B488-CFE8EBCEC176}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
