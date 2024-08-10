@@ -1,36 +1,17 @@
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Launch AlertAI.Api",
-      "type": "coreclr",
-      "request": "launch",
-      "preLaunchTask": "build",
-      "program": "${workspaceFolder}/src/AlertAI.Api/bin/Debug/net8.0/AlertAI.Api.dll",
-      "args": [],
-      "cwd": "${workspaceFolder}/src/AlertAI.Api",
-      "stopAtEntry": false,
-      "serverReadyAction": {
-        "action": "openExternally",
-        "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
-      },
-      "env": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "launchBrowser": {
-        "enabled": true,
-        "args": "${auto-detect-url}",
-        "windows": {
-          "command": "cmd.exe",
-          "args": "/C start ${auto-detect-url}"
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C#: AlertAI.Api Debug (HTTPS)",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/src/AlertAI.Api/AlertAI.Api.csproj"
         },
-        "osx": {
-          "command": "open"
-        },
-        "linux": {
-          "command": "xdg-open"
+        {
+            "name": "C#: AlertAI.Api.Tests Debug",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/tests/AlertAI.Api.Tests/AlertAI.Api.Tests.csproj"
         }
-      }
-    }
-  ]
+    ]
 }
