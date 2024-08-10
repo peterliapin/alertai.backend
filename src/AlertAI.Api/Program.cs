@@ -1,3 +1,6 @@
+using AlertAI.Api.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -8,6 +11,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+// Add services to the container.
+builder.Services.AddDbContext<AlertAIDbContext>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
