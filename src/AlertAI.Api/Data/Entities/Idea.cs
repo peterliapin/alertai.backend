@@ -9,7 +9,7 @@ public class Idea : BaseEntity
     public string Content { get; set; } = string.Empty;
 
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-    
+
     public Guid TopicId { get; set; }
 
     public Topic Topic { get; set; } = null!;
