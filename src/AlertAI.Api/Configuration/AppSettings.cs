@@ -17,3 +17,12 @@ public class PostgresConfig : BaseServiceConfig
 
     public string ConnectionString => $"User ID={UserName};Password={Password};Server={Server};Port={Port};Database={Database};Pooling=true;";
 }
+
+public class EmailConfig : BaseServiceConfig
+{
+    public bool UseSsl { get; set; }
+
+    public string FromName { get; set; } = string.Empty;
+
+    public string FromAddress { get; set; } = string.Empty;
+}
