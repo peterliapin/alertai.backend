@@ -79,7 +79,7 @@ public class TopicsController : ControllerBase
 
     [HttpPost("{id}/send-idea")]
     public async Task<IActionResult> SendIdea(Guid id)
-    {       
+    {
         var topic = await context.Topics.FindAsync(id);
 
         if (topic == null)

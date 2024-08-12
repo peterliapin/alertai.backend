@@ -15,7 +15,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IGptService, GptService>();
-builder.Services.AddSingleton<IEmailService, EmailService>(); 
+builder.Services.AddSingleton<IEmailService, EmailService>();
 
 ConfigureConventions(builder);
 
