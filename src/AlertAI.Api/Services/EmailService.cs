@@ -10,7 +10,7 @@ namespace AlertAI.Api.Services;
 
 public class EmailService : IEmailService
 {
-    private readonly EmailConfig config = new EmailConfig();
+    private readonly EmailConfig config = new();
 
     public EmailService(IConfiguration configuration)
     {
