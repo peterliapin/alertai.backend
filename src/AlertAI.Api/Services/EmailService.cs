@@ -26,7 +26,7 @@ public class EmailService : IEmailService
         }
     }
 
-    public async Task<string> SendEmail(string to, string subject, string body)
+    public async Task<string> SendEmailAsync(string to, string subject, string body)
     {
         var message = new MimeMessage();
         message.From.Add(new MailboxAddress(config.FromName, config.FromAddress));

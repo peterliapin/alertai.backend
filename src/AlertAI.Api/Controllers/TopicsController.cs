@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using AlertAI.Api.Data;
 using AlertAI.Api.Data.Entities;
+using AlertAI.Api.Interfaces;
 
 namespace AlertAI.Api.Controllers;
 [Route("api/v1/[controller]")]
@@ -9,10 +10,15 @@ namespace AlertAI.Api.Controllers;
 public class TopicsController : ControllerBase
 {
     private readonly AlertAIDbContext context;
+    private readonly IGptService gptService;
 
-    public TopicsController(AlertAIDbContext context)
+    private readonly IEmailService emailService;
+
+    public TopicsController(AlertAIDbContext context, IGptService gptService, IEmailService emailService)
     {
         this.context = context;
+        this.gptService = gptService;
+        this.emailService = emailService;
     }
 
     // GET: api/v1/topics
@@ -71,9 +77,22 @@ public class TopicsController : ControllerBase
         return NoContent();
     }
 
-    [HttpPost("{id}/send-ideas")]
-    public IActionResult SendIdeas(Guid id)
-    {
+    [HttpPost("{id}/send-idea")]
+    public async Task<IActionResult> SendIdea(Guid id)
+    {       
+        var topic = await context.Topics.FindAsync(id);
+
+        if (topic == null)
+        {
+            return NotFound();
+        }
+
+        var idea = await gptService.GenerateResponse(topic.Context, 100);
+
+        await emailService.SendEmailAsync("peter@liapin.space", "New Idea", idea);
+
         return Ok();
     }
+
+    // send-ideas API method accepting array of topic and sending ideas for all topics using SendIdea
 }

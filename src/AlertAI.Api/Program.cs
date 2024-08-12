@@ -1,5 +1,7 @@
 using AlertAI.Api.Configuration;
 using AlertAI.Api.Data;
+using AlertAI.Api.Interfaces;
+using AlertAI.Api.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +13,9 @@ ConfigureServices(builder.Services);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IGptService, GptService>();
+builder.Services.AddSingleton<IEmailService, EmailService>(); 
 
 ConfigureConventions(builder);
 

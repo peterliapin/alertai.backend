@@ -26,3 +26,8 @@ public class EmailConfig : BaseServiceConfig
 
     public string FromAddress { get; set; } = string.Empty;
 }
+
+public class OpenAIConfig
+{
+    public string ApiKey { get; set; } = string.Empty;
+}
