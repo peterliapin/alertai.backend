@@ -11,7 +11,7 @@ public class Schedule : BaseEntity
 
     [Required]
     public Guid TopicId { get; set; }
-    
+
     public Topic Topic { get; set; } = null!;
 
     public bool IsEnabled { get; set; } = false;

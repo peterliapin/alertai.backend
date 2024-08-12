@@ -45,5 +45,5 @@ public class AlertAIDbContext : DbContext
             Console.WriteLine("Failed to configure PgDbContext. Error: {0}, Stack Trace: {1}", ex.Message, ex.StackTrace);
             throw;
         }
-    }    
+    }
 }
