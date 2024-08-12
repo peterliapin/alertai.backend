@@ -46,6 +46,6 @@ public class EmailService : IEmailService
         await client.SendAsync(message);
         await client.DisconnectAsync(true);
 
-        return HttpStatusCode.OK.ToString();    
+        return HttpStatusCode.OK.ToString();
     }
 }
