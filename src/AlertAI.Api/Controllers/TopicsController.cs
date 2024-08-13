@@ -77,7 +77,7 @@ public class TopicsController : ControllerBase
         context.SaveChanges();
         return NoContent();
     }
-    
+
     /// <summary>
     /// Sends an idea for a specific topic.
     /// </summary>
