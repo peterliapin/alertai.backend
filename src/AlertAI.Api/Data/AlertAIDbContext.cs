@@ -23,7 +23,7 @@ public class AlertAIDbContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         try
-        {            
+        {
             if (optionsBuilder.IsConfigured)
             {
                 // Prevents the configuration from being set more than once (e.g. when running tests)

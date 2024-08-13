@@ -18,5 +18,5 @@ public class IdeasControllerTests : BaseTest
 
         // Assert
         Assert.IsType<OkObjectResult>(result);
-    }    
+    }
 }
