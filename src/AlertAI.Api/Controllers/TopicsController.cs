@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using AlertAI.Api.Data;
 using AlertAI.Api.Data.Entities;
 using AlertAI.Api.Interfaces;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace AlertAI.Api.Controllers;
 [Route("api/v1/[controller]")]
@@ -76,8 +77,16 @@ public class TopicsController : ControllerBase
         context.SaveChanges();
         return NoContent();
     }
-
+    
+    /// <summary>
+    /// Sends an idea for a specific topic.
+    /// </summary>
+    /// <param name="id">The ID of the topic.</param>
+    /// <returns>An IActionResult indicating the result of the operation.</returns>
     [HttpPost("{id}/send-idea")]
+    [SwaggerOperation(Summary = "Sends an idea for a specific topic")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> SendIdea(Guid id)
     {
         var topic = await context.Topics.FindAsync(id);
