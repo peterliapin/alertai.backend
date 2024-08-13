@@ -43,7 +43,7 @@ await app.RunAsync();
 static void ConfigureServices(IServiceCollection services)
 {
     // Throw an exception for testing purposes
-    throw new Exception("Deliberate exception for testing");
+    // throw new Exception("Deliberate exception for testing");
 
     services.AddControllers();
     services.AddApiVersioning(config =>

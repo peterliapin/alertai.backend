@@ -3,26 +3,27 @@ using AlertAI.Api.Data;
 using AlertAI.Api.Data.Entities;
 
 namespace AlertAI.Api.Controllers;
-[Route("api/v1/[controller]")]
+
+[Route("api/[controller]")]
 [ApiController]
 [ApiVersion("1.0")]
-public class IdeasController : ControllerBase
+public class IdeaController : ControllerBase
 {
     private readonly AlertAIDbContext context;
 
-    public IdeasController(AlertAIDbContext context)
+    public IdeaController(AlertAIDbContext context)
     {
         this.context = context;
     }
 
-    // GET: api/v1/ideas
+    // GET: api/idea
     [HttpGet]
     public ActionResult<IEnumerable<Idea>> GetIdeas()
     {
         return Ok(context.Ideas.ToList());
     }
 
-    // GET: api/v1/ideas/{id}
+    // GET: api/idea/{id}
     [HttpGet("{id}")]
     public ActionResult<Idea> GetIdea(Guid id)
     {
@@ -34,7 +35,7 @@ public class IdeasController : ControllerBase
         return Ok(idea);
     }
 
-    // POST: api/v1/ideas
+    // POST: api/idea
     [HttpPost]
     public ActionResult<Idea> CreateIdea([FromBody] Idea idea)
     {
@@ -43,7 +44,7 @@ public class IdeasController : ControllerBase
         return CreatedAtAction(nameof(GetIdea), new { id = idea.Id }, idea);
     }
 
-    // PUT: api/v1/ideas/{id}
+    // PUT: api/idea/{id}
     [HttpPut("{id}")]
     public IActionResult UpdateIdea(Guid id, [FromBody] Idea updatedIdea)
     {
@@ -57,7 +58,7 @@ public class IdeasController : ControllerBase
         return NoContent();
     }
 
-    // DELETE: api/v1/ideas/{id}
+    // DELETE: api/idea/{id}
     [HttpDelete("{id}")]
     public IActionResult DeleteIdea(Guid id)
     {

@@ -1,12 +1,22 @@
-using Xunit;
+using AlertAI.Api.Controllers;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AlertAI.Api.Tests;
 
-public class IdeasControllerTests
+public class IdeasControllerTests : BaseTest
 {
     [Fact]
-    public void Test1()
+    public void GetIdeas_ReturnsOk()
     {
-        Assert.True(true);
-    }
+        // Arrange
+        var dbContext = GetInMemoryDbContext();
+        var ideasController = new IdeaController(dbContext);
+
+        // Act
+        var actionResult = ideasController.GetIdeas();
+        var result = actionResult.Result;
+
+        // Assert
+        Assert.IsType<OkObjectResult>(result);
+    }    
 }
