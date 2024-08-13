@@ -1,5 +1,4 @@
 # AlertAI
-
 This repository contains the source code for the AlertAI project.
 
 ## Prerequisites
@@ -35,7 +34,13 @@ To run the AlertAI project locally, follow these steps:
     dotnet build
     ```
 
-5. Run the following command to start the application:
+5. Run the following command to apply migrations:
+
+    ```shell
+    dotnet ef database update
+    ```
+
+6. Run the following command to start the application:
 
     ```shell
     dotnet run
@@ -43,7 +48,29 @@ To run the AlertAI project locally, follow these steps:
 
     The application will start and listen for incoming requests.
 
-6. Open your web browser and navigate to `http://localhost:5298` to access the application.
+7. Open your web browser and navigate to `http://localhost:5298` to access the application.
+
+## Adding Migrations
+
+To add migrations to the AlertAI project, follow these steps:
+
+1. Open a terminal or command prompt.
+2. Navigate to the `src/AlertAI.Api` directory.
+3. Run the following command to add migrations:
+
+    ```shell
+    dotnet ef migrations add migration_name
+    ```
+
+    This will create a migration based on your current database context.
+
+4. Run the following command to apply the migrations to the database:
+
+    ```shell
+    dotnet ef database update
+    ```
+
+    This will apply the pending migrations to the database.
 
 ## Running the Tests
 

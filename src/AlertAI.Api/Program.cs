@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<AlertAIDbContext>();
 ConfigureServices(builder.Services);
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -37,11 +37,14 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+await app.RunAsync();
 
 
 static void ConfigureServices(IServiceCollection services)
 {
+    // Throw an exception for testing purposes
+    throw new Exception("Deliberate exception for testing");
+
     services.AddControllers();
     services.AddApiVersioning(config =>
     {
