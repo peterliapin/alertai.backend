@@ -26,20 +26,6 @@ public class GptService : IGptService
 
     public async Task<string> GenerateResponse(string prompt, int maxTokens)
     {
-        var client = new ChatClient(model: "gpt-4o", openAIConfig.ApiKey);
 
-        var options = new ChatCompletionOptions()
-        {
-            MaxTokens = maxTokens
-        };
-
-        var messages = new List<UserChatMessage>
-        {
-            new UserChatMessage(prompt)
-        };
-
-        var completion = await client.CompleteChatAsync(messages, options);
-
-        return completion.Value.Content[0].Text;
     }
 }

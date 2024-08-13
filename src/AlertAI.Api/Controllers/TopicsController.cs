@@ -102,6 +102,4 @@ public class TopicsController : ControllerBase
 
         return Ok();
     }
-
-    // send-ideas API method accepting array of topic and sending ideas for all topics using SendIdea
 }

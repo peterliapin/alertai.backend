@@ -14,7 +14,31 @@
 
 [EmailService.cs](./src/AlertAI.Api/Services/EmailService.cs)
 
-### Task 4 - Implement new send-ideas API method in TopicController
+### Task 4 - Write the code that will go to GPT and execute prompt
+
+```
+var client = new ChatClient(model: "gpt-4o", openAIConfig.ApiKey);
+
+var options = new ChatCompletionOptions()
+{
+    MaxTokens = maxTokens
+};
+
+var messages = new List<UserChatMessage>
+{
+    new UserChatMessage(prompt)
+};
+
+var completion = await client.CompleteChatAsync(messages, options);
+
+return completion.Value.Content[0].Text;
+```
+
+### Task 4 - Implement new send-ideas API method in TopicController prividing context in comments
+
+```
+// send-ideas API method accepting array of topic and sending ideas for all topics using SendIdea
+```
 
 [TopicsController.cs](./src/AlertAI.Api/Controllers/TopicsController.cs)
 
@@ -32,28 +56,26 @@
 
 [IdeaController.cs](./src/AlertAI.Api/Controllers/IdeaController.cs)
 
-## Task 8 - Update Readme to include information about migrations
+### Task 8 - Update Readme to include information about migrations
 
-Update readme to show how tp add and run migrations locally. Note that we should run migrations before we start. Add new  section for developers explaining how to add new migrations and where they are located.
+Update readme to show how to add and run migrations locally. Note that we should run migrations before we do dotnet run. Please also add a new section for developers explaining how to add new migrations and where they are located.
 
-# Exerceise 2 - API documentation
+### Task 9 - API documentation
 
 [TopicsController.cs](./src/AlertAI.Api/Controllers/TopicsController.cs)
 
 Add SwaggerOperation and ProducesResponseType attribute to all API method similar to existing SendIdea method.
 
-# Exerceise 2 - Put migrations into a different folder
-
-
-# Exerceise 3 - Write the code that will go to GPT and execute prompt
-
-
-# Exerceise 4 - Write a new controller to send multiple ideas
+### Task 10 - Commit changes and use AI generate commit message
 
 
 ## Advanced Use Cases
 
-### Task 1 - 
+### Task 1 - Show how @workspace, /explain, /fix, /new and /tests commands work.
+
+### Task 2 - Cover TopicsController with unit-tests
+
+Generate tests to cover #file:TopicsController.cs, take into account that instead of real EmailService we need to use #file:TestEmailService.cs. Use #file:IdeasControllerTests.cs as a source of inspiration on how to do the rest.
 
 ### Task 2 - Generate command to copy files over ssh
 
