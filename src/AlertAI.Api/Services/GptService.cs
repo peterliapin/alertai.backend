@@ -1,6 +1,8 @@
 using AlertAI.Api.Configuration;
 using AlertAI.Api.Exceptions;
 using AlertAI.Api.Interfaces;
+using OpenAI;
+using OpenAI.Chat;
 
 namespace AlertAI.Api.Services;
 
@@ -25,6 +27,20 @@ public class GptService : IGptService
 
     public async Task<string> GenerateResponse(string prompt, int maxTokens)
     {
-        throw new NotImplementedException();
+        var client = new ChatClient(model: "gpt-4o", openAIConfig.ApiKey);
+
+        var options = new ChatCompletionOptions()
+        {
+            MaxTokens = maxTokens
+        };
+
+        var messages = new List<UserChatMessage>
+        {
+            new UserChatMessage(prompt)
+        };
+
+        var completion = await client.CompleteChatAsync(messages, options);
+
+        return completion.Value.Content[0].Text;
     }
 }
