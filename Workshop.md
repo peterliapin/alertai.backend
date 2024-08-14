@@ -34,7 +34,7 @@ var completion = await client.CompleteChatAsync(messages, options);
 return completion.Value.Content[0].Text;
 ```
 
-### Task 4 - Implement new send-ideas API method in TopicController prividing context in comments
+### Task 5 - Implement new send-ideas API method in TopicController prividing context in comments
 
 ```
 // send-ideas API method accepting array of topic and sending ideas for all topics using SendIdea
@@ -42,7 +42,7 @@ return completion.Value.Content[0].Text;
 
 [TopicsController.cs](./src/AlertAI.Api/Controllers/TopicsController.cs)
 
-### Task 5 - Find out if errors handling should be added on the controller level using Q&A mode
+### Task 6 - Find out if errors handling should be added on the controller level using Q&A mode
 
 ```
 // q: Is it a good idea to have errors handling logic on the controller level or are there alternative approaches to avoid copy-pasting try/catch/finally in all API methods?
@@ -50,23 +50,23 @@ return completion.Value.Content[0].Text;
 // a: 
 ```
 
-### Task 6 - Find out if there are any naming inconsistencies using Chat
+### Task 7 - Find out if there are any naming inconsistencies using Chat
 
-### Task 7 - Fix naming convention inconsistency in IdeaController
+### Task 8 - Fix naming convention inconsistency in IdeaController
 
 [IdeaController.cs](./src/AlertAI.Api/Controllers/IdeaController.cs)
 
-### Task 8 - Update Readme to include information about migrations
+### Task 9 - Update Readme to include information about migrations
 
 Update readme to show how to add and run migrations locally. Note that we should run migrations before we do dotnet run. Please also add a new section for developers explaining how to add new migrations and where they are located.
 
-### Task 9 - API documentation
+### Task 10 - API documentation
 
 [TopicsController.cs](./src/AlertAI.Api/Controllers/TopicsController.cs)
 
 Add SwaggerOperation and ProducesResponseType attribute to all API method similar to existing SendIdea method.
 
-### Task 10 - Commit changes and use AI generate commit message
+### Task 11 - Commit changes and use AI generate commit message
 
 
 ## Advanced Use Cases

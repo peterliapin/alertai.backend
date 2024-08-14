@@ -1,7 +1,6 @@
 using AlertAI.Api.Configuration;
 using AlertAI.Api.Exceptions;
 using AlertAI.Api.Interfaces;
-using OpenAI.Chat;
 
 namespace AlertAI.Api.Services;
 
@@ -26,6 +25,6 @@ public class GptService : IGptService
 
     public async Task<string> GenerateResponse(string prompt, int maxTokens)
     {
-
+        throw new NotImplementedException();
     }
 }
