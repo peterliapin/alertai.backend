@@ -88,7 +88,7 @@ Update readme to show how to add and run migrations locally. Note that we should
 
 [TopicsController.cs](./src/Suggestio.Api/Controllers/TopicsController.cs)
 
-Add SwaggerOperation and ProducesResponseType attribute to all API method similar to existing SendIdea method.
+Sync commenting style and the way how we define SwaggerOperation and ProducesResponseType from TopicsController to other two controllers.
 
 ### Task 11 - Commit changes and use AI generate commit message
 
