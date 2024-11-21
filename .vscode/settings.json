@@ -6,5 +6,6 @@
     "search.exclude": {
       "**/bin": true,
       "**/obj": true,
-    }
+    },
+    "github.copilot.chat.codeGeneration.useInstructionFiles": true
   }

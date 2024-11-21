@@ -7,7 +7,7 @@
       "type": "process",
       "args": [
         "build",
-        "${workspaceFolder}/AlertAI.sln"
+        "${workspaceFolder}/Suggestio.sln"
       ],
       "problemMatcher": "$msCompile",
       "group": {

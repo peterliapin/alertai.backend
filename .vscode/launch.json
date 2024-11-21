@@ -2,16 +2,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "C#: AlertAI.Api Debug (HTTPS)",
+            "name": "C#: Suggestio.Api Debug (HTTPS)",
             "type": "dotnet",
             "request": "launch",
-            "projectPath": "${workspaceFolder}/src/AlertAI.Api/AlertAI.Api.csproj"
+            "projectPath": "${workspaceFolder}/src/Suggestio.Api/Suggestio.Api.csproj"
         },
         {
-            "name": "C#: AlertAI.Api.Tests Debug",
+            "name": "C#: Suggestio.Api.Tests Debug",
             "type": "dotnet",
             "request": "launch",
-            "projectPath": "${workspaceFolder}/tests/AlertAI.Api.Tests/AlertAI.Api.Tests.csproj"
+            "projectPath": "${workspaceFolder}/tests/Suggestio.Api.Tests/Suggestio.Api.Tests.csproj"
         }
     ]
 }

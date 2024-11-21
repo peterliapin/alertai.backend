@@ -1,5 +1,5 @@
-# AlertAI
-This repository contains the source code for the AlertAI project.
+# Suggestio
+This repository contains the source code for the Suggestio project.
 
 ## Prerequisites
 
@@ -11,17 +11,17 @@ Before running the project and tests locally, make sure you have the following p
 
 ## Getting Started
 
-To get started with the AlertAI project, follow these steps:
+To get started with the Suggestio project, follow these steps:
 
 1. Clone this repository to your local machine.
-2. Open the `AlertAI.sln` solution file in Visual Studio or your preferred code editor.
+2. Open the `Suggestio.sln` solution file in Visual Studio or your preferred code editor.
 
 ## Running the Project
 
-To run the AlertAI project locally, follow these steps:
+To run the Suggestio project locally, follow these steps:
 
 1. Open a terminal or command prompt.
-2. Navigate to the `src/AlertAI.Api` directory.
+2. Navigate to the `src/Suggestio.Api` directory.
 3. Run the following command to restore dependencies:
 
     ```shell
@@ -46,10 +46,10 @@ To run the AlertAI project locally, follow these steps:
 
 ## Running the Tests
 
-To run the tests for the AlertAI project locally, follow these steps:
+To run the tests for the Suggestio project locally, follow these steps:
 
 1. Open a terminal or command prompt.
-2. Navigate to the `tests/AlertAI.Api.Tests` directory.
+2. Navigate to the `tests/Suggestio.Api.Tests` directory.
 3. Run the following command to restore dependencies:
 
     ```shell

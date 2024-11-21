@@ -4,15 +4,15 @@
 
 ### Task 1 - Explain what ConfigureConventions method does in Program.cs
 
-[Program.cs](./src/AlertAI.Api/Program.cs)
+[Program.cs](./src/Suggestio.Api/Program.cs)
 
 ### Task 2 - Add one more implementation for IEmailService to support attachments
 
-[IEmailService.cs](./src/AlertAI.Api/Interfaces/IEmailService.cs)
+[IEmailService.cs](./src/Suggestio.Api/Interfaces/IEmailService.cs)
 
 ### Task 3 - Implement new method in EmailService
 
-[EmailService.cs](./src/AlertAI.Api/Services/EmailService.cs)
+[EmailService.cs](./src/Suggestio.Api/Services/EmailService.cs)
 
 ### Task 4 - Write the code that will go to GPT and execute prompt
 
@@ -40,7 +40,7 @@ return completion.Value.Content[0].Text;
 // send-ideas API method accepting array of topic and sending ideas for all topics using SendIdea
 ```
 
-[TopicsController.cs](./src/AlertAI.Api/Controllers/TopicsController.cs)
+[TopicsController.cs](./src/Suggestio.Api/Controllers/TopicsController.cs)
 
 ### Task 6 - Find out if errors handling should be added on the controller level using Q&A mode
 
@@ -54,7 +54,7 @@ return completion.Value.Content[0].Text;
 
 ### Task 8 - Fix naming convention inconsistency in IdeaController
 
-[IdeaController.cs](./src/AlertAI.Api/Controllers/IdeaController.cs)
+[IdeaController.cs](./src/Suggestio.Api/Controllers/IdeaController.cs)
 
 ### Task 9 - Update Readme to include information about migrations
 
@@ -62,7 +62,7 @@ Update readme to show how to add and run migrations locally. Note that we should
 
 ### Task 10 - API documentation
 
-[TopicsController.cs](./src/AlertAI.Api/Controllers/TopicsController.cs)
+[TopicsController.cs](./src/Suggestio.Api/Controllers/TopicsController.cs)
 
 Add SwaggerOperation and ProducesResponseType attribute to all API method similar to existing SendIdea method.
 
@@ -83,4 +83,4 @@ Generate a command to copy all files from the current folder to /home/user/targe
 
 ### Task 3 - Find out why application crash on start
 
-[Program.cs](./src/AlertAI.Api/Program.cs)
+[Program.cs](./src/Suggestio.Api/Program.cs)
