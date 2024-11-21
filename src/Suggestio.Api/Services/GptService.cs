@@ -31,7 +31,7 @@ public class GptService : IGptService
 
         var options = new ChatCompletionOptions()
         {
-            MaxTokens = maxTokens
+            MaxOutputTokenCount = maxTokens
         };
 
         var messages = new List<UserChatMessage>
