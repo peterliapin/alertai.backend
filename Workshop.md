@@ -99,7 +99,7 @@ Sync commenting style and the way how we define SwaggerOperation and ProducesRes
 
 ### Task 2 - Cover TopicsController with unit-tests
 
-Generate tests to cover #file:TopicsController.cs, take into account that instead of real EmailService we need to use #file:TestEmailService.cs. Use #file:IdeasControllerTests.cs as a source of inspiration on how to do the rest.
+Generate tests to cover TopicsController.cs, take into account that instead of real EmailService we need to use existing TestEmailService.cs. Use IdeasControllerTests.cs as a source of inspiration on how to do the rest.
 
 ### Task 2 - Generate command to copy files over ssh
 
