@@ -10,7 +10,7 @@ public class IdeasControllerTests : BaseTest
     {
         // Arrange
         var dbContext = GetInMemoryDbContext();
-        var ideasController = new IdeasController(dbContext);
+        var ideasController = new IdeaController(dbContext);
 
         // Act
         var actionResult = ideasController.GetIdeas();

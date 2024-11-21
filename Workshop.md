@@ -16,6 +16,9 @@
 
 ### Task 4 - Write the code that will go to GPT and execute prompt
 
+// executes prompt taking maxTokens parameter into account using gpt-4o model and ChatClient
+// be sure to use latest version 2.0.0 of OpenAI library
+
 ```
 var client = new ChatClient(model: "gpt-4o", openAIConfig.ApiKey);
 
@@ -36,11 +39,32 @@ return completion.Value.Content[0].Text;
 
 ### Task 5 - Implement new send-ideas API method in TopicController prividing context in comments
 
+[TopicsController.cs](./src/Suggestio.Api/Controllers/TopicsController.cs)
+
 ```
-// send-ideas API method accepting array of topic and sending ideas for all topics using SendIdea
+// send-ideas API method accepting array of topic and sending ideas for all topics using SendIdea method
 ```
 
-[TopicsController.cs](./src/Suggestio.Api/Controllers/TopicsController.cs)
+```
+/// <summary>
+/// Sends multiple ideas for specific topics.
+/// </summary>
+/// <param name="ids">The IDs of the topics.</param>
+/// <returns>An IActionResult indicating the result of the operation.</returns>
+[HttpPost("{id}/send-ideas")]
+[SwaggerOperation(Summary = "Sends multiple ideas for specific topics")]
+[ProducesResponseType(StatusCodes.Status200OK)]
+[ProducesResponseType(StatusCodes.Status404NotFound)]
+public async Task<IActionResult> SendIdeas(Guid[] ids)
+{
+    foreach (var id in ids)
+    {
+        await SendIdea(id);
+    }
+
+    return Ok();
+}
+```
 
 ### Task 6 - Find out if errors handling should be added on the controller level using Q&A mode
 
